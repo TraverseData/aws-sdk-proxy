@@ -1,0 +1,33 @@
+{
+  "name": "aws-sdk-proxy",
+  "version": "1.0.0",
+  "description": "Transparently add proxy support to the aws-sdk-js package",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monken/aws-sdk-proxy.git"
+  },
+  "keywords": [
+    "aws",
+    "proxy",
+    "sdk"
+  ],
+  "author": "Moritz Onken <onken@netcubed.de>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/monken/aws-sdk-proxy/issues"
+  },
+  "homepage": "https://github.com/monken/aws-sdk-proxy#readme",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "dependencies": {
+    "aws-sdk": ""
+  },
+  "devDependencies": {
+    "proxy-agent": "^2.0.0"
+  }
+}
