@@ -1,6 +1,6 @@
 {
-  "name": "aws-sdk-proxy",
-  "version": "1.0.0",
+  "name": "@traverse-data/aws-sdk-proxy",
+  "version": "1.0.1",
   "description": "Transparently add proxy support to the aws-sdk-js package",
   "main": "index.js",
   "files": [
@@ -8,7 +8,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/monken/aws-sdk-proxy.git"
+    "url": "git+https://github.com/TraverseData/aws-sdk-proxy.git"
   },
   "keywords": [
     "aws",
@@ -18,16 +18,16 @@
   "author": "Moritz Onken <onken@netcubed.de>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/monken/aws-sdk-proxy/issues"
+    "url": "https://github.com/TraverseData/aws-sdk-proxy/issues"
   },
-  "homepage": "https://github.com/monken/aws-sdk-proxy#readme",
+  "homepage": "https://github.com/TraverseData/aws-sdk-proxy#readme",
   "engines": {
     "node": ">=0.10.0"
   },
-  "dependencies": {
-    "aws-sdk": ""
+  "Dependencies": {
+    "proxy-agent": "^3.0.3"
   },
-  "devDependencies": {
-    "proxy-agent": "^2.0.0"
+  "scripts": {
+    "release": "git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish --access public"
   }
 }
