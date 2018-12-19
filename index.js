@@ -1,7 +1,7 @@
 var AWS = require('aws-sdk');
 
 var proxy = process.env['HTTPS_PROXY'] || process.env['https_proxy'];
-var isProduction = typeof process.env['AWS_ENV_NAME'] === 'undefined';
+var isProduction = (typeof process.env['NODE_ENV'] !== 'undefined' && process.env['NODE_ENV'] === 'production');
 if (isProduction && proxy) {
   try {
     var agent = require('proxy-agent');
