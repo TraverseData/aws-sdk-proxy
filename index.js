@@ -4,10 +4,8 @@ var proxy = process.env['HTTPS_PROXY'] || process.env['https_proxy'] || process.
 var isProduction = (typeof process.env['NODE_ENV'] !== 'undefined' && process.env['NODE_ENV'] === 'production');
 if (isProduction && proxy) {
   try {
-    var agent = require('proxy-agent');
     AWS.config.update({
       httpOptions: {
-        agent: agent(proxy),
         proxy: proxy
       },
     });
