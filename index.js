@@ -1,6 +1,6 @@
 var AWS = require('aws-sdk');
 
-var proxy = process.env['HTTPS_PROXY'] || process.env['https_proxy'];
+var proxy = process.env['HTTPS_PROXY'] || process.env['https_proxy'] || process.env['http_proxy'];
 var isProduction = (typeof process.env['NODE_ENV'] !== 'undefined' && process.env['NODE_ENV'] === 'production');
 if (isProduction && proxy) {
   try {
@@ -8,6 +8,7 @@ if (isProduction && proxy) {
     AWS.config.update({
       httpOptions: {
         agent: agent(proxy),
+        proxy: proxy
       },
     });
   } catch (e) {
