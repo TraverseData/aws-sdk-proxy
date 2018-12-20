@@ -1,6 +1,6 @@
 {
   "name": "@traverse-data/aws-sdk-proxy",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Transparently add proxy support to the aws-sdk-js package",
   "main": "index.js",
   "files": [
@@ -23,9 +23,6 @@
   "homepage": "https://github.com/TraverseData/aws-sdk-proxy#readme",
   "engines": {
     "node": ">=0.10.0"
-  },
-  "Dependencies": {
-    "proxy-agent": "^3.0.3"
   },
   "scripts": {
     "release": "git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish --access public"
