@@ -1,6 +1,6 @@
 {
   "name": "@traverse-data/aws-sdk-proxy",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Transparently add proxy support to the aws-sdk-js package",
   "main": "index.js",
   "files": [
